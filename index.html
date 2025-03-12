@@ -1,21 +1,41 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Menu</title>
-</head>
-<body>
-    <h2>Aggiungi una pizza al menu</h2>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Aggiungi una pizza al menu</h2>
+      <label for="pizzaName">Nome Pizza:</label>
+      <input type="text" id="pizzaName" placeholder="Es. Margherita">
+
+      <label for="pizzaPrice">Prezzo (€):</label>
+      <input type="number" id="pizzaPrice" placeholder="Es. 10">
+
+      <button id="addPizzaBtn">Aggiungi Pizza</button>
+      <div>
+        <form action="#">
+          <label for="pizzaToOrder">Ordina Pizza:</label>
+          <select name="availablePizzas" id="pizzaToOrder" size="1">
+            <option value="Scegli" selected>Scegli una pizza</option>
+            <option value="Margherita">Margherita</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Hawaiian">Hawaiian</option>
+            <option value="Veggie">Veggie</option>
+          </select>
+          <button id="placeOrderBtn">Ordina Pizza</button>
+        </form>
+		<p>Cassa: <span id="cashDisplay">100</span>€</p>
+      </div>
+	  <div>
+		<label for="orderNumber">Ordine da completare</label>
+      	<input type="number" id="orderNumber" name="orderNumber" min="0" max="0">
+		<button id="completeOrderBtn">Completa Ordine</button>
+	  </div>
+    </div>
     
-    <label for="pizzaName">Nome Pizza:</label>
-    <input type="text" id="pizzaName" placeholder="Es. Margherita">
-
-    <label for="pizzaPrice">Prezzo (€):</label>
-    <input type="number" id="pizzaPrice" placeholder="Es. 10">
-
-    <button id="addPizzaBtn">Aggiungi Pizza</button>
-
-    <script src="./index.js" type="module"></script>
-</body>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
